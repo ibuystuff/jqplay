@@ -22,9 +22,13 @@
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-text-replace": "^0.4.0"
+    "grunt-text-replace": "^0.4.0",
+    "snyk": "^1.316.1"
   },
   "scripts": {
-    "postinstall": "bower install && rm -rf public/bower_components/ace-builds/demo/kitchen-sink/docs && grunt build"
-  }
+    "postinstall": "bower install && rm -rf public/bower_components/ace-builds/demo/kitchen-sink/docs && grunt build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
